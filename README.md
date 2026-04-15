@@ -87,6 +87,8 @@
 | 注解 / 编译时 / APT | APT注解处理技术原理 |
 | 防抖 / IdleHandler / UI流畅 | 弹窗延迟实例化躲避动效 |
 | 双指针 / 算法优化 | 循环操作注意事项 |
+| 搜索 / debounce / switchMap | AndroidSearchView |
+| SSDP / 设备发现 / Flow | Lighthouse |
 
 ---
 
