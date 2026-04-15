@@ -1,5 +1,3 @@
-# Knowledge-Note
-记录技术笔记
 # Android 技术笔记索引
 
 > 快速查找 | 按模块分类 | 点击跳转
