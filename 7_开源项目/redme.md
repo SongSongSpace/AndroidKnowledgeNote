@@ -6,7 +6,7 @@
 
 | 项目 | 简介 | 核心亮点 |索引 |
 |------|------|----------| ---- |
-| [Lighthouse](https://github.com/ivanempire/lighthouse) | 局域网设备发现库 | SSDP协议 + 状态驱动 + Kotlin Flow |[Lighthouse.md](7_开源项目/260415-Lighthouse.md)|
+| [Lighthouse](https://github.com/ivanempire/lighthouse) | 局域网设备发现库 | SSDP协议 + 状态驱动 + Kotlin Flow |[Lighthouse.md](260415-Lighthouse.md)|
 | [OkHttp](https://github.com/square/okhttp) | 高效HTTP客户端 | 连接池、拦截器、缓存 |-|
 | [Retrofit](https://github.com/square/retrofit) | 类型安全的HTTP客户端 | 动态代理 + 注解处理 |-|
 
