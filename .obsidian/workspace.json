@@ -147,7 +147,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "添加笔记属性"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "0_核心原理/260414-协程基础.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 260414-协程基础"
+              "title": "README 的大纲"
             }
           },
           {
@@ -194,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a36e15900f34c94",
+  "active": "1bbc1528b8606787",
   "lastOpenFiles": [
     "0_核心原理/260415-三次握手.md",
     "12_算法/冒泡算法.md",
