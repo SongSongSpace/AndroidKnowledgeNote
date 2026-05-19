@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "99_问题速记/260410-问题列表.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "260410-问题列表 的大纲"
             }
           },
           {
@@ -194,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dbf504f87901dffb",
+  "active": "1bbc1528b8606787",
   "lastOpenFiles": [
     "12_算法/冒泡算法.md",
     "README.md",
