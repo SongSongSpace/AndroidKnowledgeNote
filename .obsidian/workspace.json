@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "198997d3cf852f00",
+        "id": "983f734765d383ea",
         "type": "tabs",
         "children": [
           {
-            "id": "dbf504f87901dffb",
+            "id": "884c357ff2e6f770",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -194,7 +194,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1bbc1528b8606787",
+  "active": "884c357ff2e6f770",
   "lastOpenFiles": [
     "12_算法/冒泡算法.md",
     "README.md",
