@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "878de1e7509c9a8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "198997d3cf852f00",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbf504f87901dffb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12_算法/冒泡算法.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "冒泡算法"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "747269727a713a22",
+    "type": "split",
+    "children": [
+      {
+        "id": "86b16abd69e9c151",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a36e15900f34c94",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "aaf2274ac5da037b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "17d0c1c810e6e6b6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c17ece79b12d6a60",
+    "type": "split",
+    "children": [
+      {
+        "id": "988893cba1abe250",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c46483cfc35ec3fe",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0_核心原理/260414-协程基础.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 260414-协程基础"
+            }
+          },
+          {
+            "id": "d0a10c7ea45d25b1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0_核心原理/260414-协程基础.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 260414-协程基础"
+            }
+          },
+          {
+            "id": "95055982250bb758",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "28ecc841df1ee935",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0bf9ecd64fb6bc60",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0_核心原理/260414-协程基础.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 260414-协程基础"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "dbf504f87901dffb",
+  "lastOpenFiles": [
+    "99_问题速记/260410-问题列表.md",
+    "12_算法/冒泡算法.md",
+    "0_核心原理/260414-协程基础.md",
+    "12_算法",
+    "Untitled.canvas",
+    "0_核心原理/260414-代理模式笔记.md",
+    "0_核心原理/260413-Window概念笔记.md",
+    "0_核心原理/260413-startActivity到handleLaunchActivity完整链路.md",
+    "0_核心原理/260413-APT注解处理技术原理.md"
+  ]
+}

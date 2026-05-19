@@ -1,0 +1,36 @@
+{
+  "editor:insert-footnote": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "J"
+    }
+  ],
+  "editor:insert-callout": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
+    }
+  ],
+  "editor:insert-codeblock": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "C"
+    }
+  ],
+  "obsidian-git:commit-smart": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ]
+}
