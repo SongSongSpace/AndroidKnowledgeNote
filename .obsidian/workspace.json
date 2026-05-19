@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "983f734765d383ea",
+        "id": "317ab83be135ed09",
         "type": "tabs",
         "children": [
           {
-            "id": "884c357ff2e6f770",
+            "id": "bf5df3a46713e28a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_问题速记/260410-问题列表.md",
+                "file": "11_AI相关/教程资源.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "260410-问题列表"
+              "title": "教程资源"
             }
           }
         ]
@@ -174,9 +174,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "6e0c1e6db8abcef0",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -194,13 +204,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "884c357ff2e6f770",
+  "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
+    "11_AI相关/教程资源.md",
+    "11_AI相关/教程资源.md",
+    "99_问题速记/260410-问题列表.md",
     "12_算法/冒泡算法.md",
     "README.md",
     "0_核心原理/260415-三次握手.md",
     "untitled folder",
-    "99_问题速记/260410-问题列表.md",
     "0_核心原理/260414-协程基础.md",
     "12_算法",
     "Untitled.canvas",
