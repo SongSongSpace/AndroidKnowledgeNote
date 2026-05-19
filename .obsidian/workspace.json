@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_算法/冒泡算法.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "冒泡算法"
+              "title": "README"
             }
           }
         ]
@@ -164,13 +164,23 @@
               "icon": "lucide-list",
               "title": "Outline of 260414-协程基础"
             }
+          },
+          {
+            "id": "1bbc1528b8606787",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,9 +196,10 @@
   },
   "active": "2a36e15900f34c94",
   "lastOpenFiles": [
+    "0_核心原理/260415-三次握手.md",
+    "12_算法/冒泡算法.md",
     "untitled folder",
     "99_问题速记/260410-问题列表.md",
-    "12_算法/冒泡算法.md",
     "0_核心原理/260414-协程基础.md",
     "12_算法",
     "Untitled.canvas",
