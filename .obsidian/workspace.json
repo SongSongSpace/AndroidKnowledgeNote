@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_算法/冒泡算法.md",
+                "file": "99_问题速记/260410-问题列表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "冒泡算法"
+              "title": "260410-问题列表"
             }
           }
         ]
@@ -196,9 +196,9 @@
   },
   "active": "dbf504f87901dffb",
   "lastOpenFiles": [
+    "12_算法/冒泡算法.md",
     "README.md",
     "0_核心原理/260415-三次握手.md",
-    "12_算法/冒泡算法.md",
     "untitled folder",
     "99_问题速记/260410-问题列表.md",
     "0_核心原理/260414-协程基础.md",
