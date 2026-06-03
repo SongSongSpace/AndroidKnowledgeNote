@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_AI相关/教程资源.md",
+                "file": "11_AI赋能/提示词.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "教程资源"
+              "title": "提示词"
             }
           }
         ]
@@ -204,10 +204,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1bbc1528b8606787",
+  "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
-    "11_AI相关/教程资源.md",
-    "11_AI相关/教程资源.md",
+    "11_AI赋能/教程资源.md",
+    "13_",
     "99_问题速记/260410-问题列表.md",
     "12_算法/冒泡算法.md",
     "README.md",
