@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_AI赋能/提示词.md",
+                "file": "12_算法/学习笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "提示词"
+              "title": "学习笔记"
             }
           }
         ]
@@ -206,10 +206,12 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
+    "12_算法/冒泡算法.md",
+    "12_算法/学习笔记.md",
+    "11_AI赋能/提示词.md",
     "11_AI赋能/教程资源.md",
     "13_",
     "99_问题速记/260410-问题列表.md",
-    "12_算法/冒泡算法.md",
     "README.md",
     "0_核心原理/260415-三次握手.md",
     "untitled folder",
