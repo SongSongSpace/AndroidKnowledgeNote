@@ -186,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -204,7 +204,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1bbc1528b8606787",
+  "active": "0bf9ecd64fb6bc60",
   "lastOpenFiles": [
     "12_算法/学习笔记.md",
     "12_算法/数据结构.md",
