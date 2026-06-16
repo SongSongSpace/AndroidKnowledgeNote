@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_算法/链表算法.md",
+                "file": "12_算法/数据结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "链表算法"
+              "title": "数据结构"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_算法/链表算法.md",
+                "file": "12_算法/数据结构.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "链表算法 的大纲"
+              "title": "数据结构 的大纲"
             }
           },
           {
@@ -206,8 +206,8 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
-    "12_算法/数组排序算法.md",
     "12_算法/链表算法.md",
+    "12_算法/数组排序算法.md",
     "12_算法/数据结构.md",
     "12_算法/学习笔记.md",
     "11_AI赋能/神经网络/手写数字识别.md",
