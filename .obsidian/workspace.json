@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_算法/BFS DFS 搜索.md",
+                "file": "12_算法/贪心算法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "BFS DFS 搜索"
+              "title": "贪心算法"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_算法/BFS DFS 搜索.md",
+                "file": "12_算法/贪心算法.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "BFS DFS 搜索 的大纲"
+              "title": "贪心算法 的大纲"
             }
           },
           {
@@ -206,8 +206,8 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
-    "12_算法/贪心算法.md",
     "12_算法/BFS DFS 搜索.md",
+    "12_算法/贪心算法.md",
     "12_算法/动态规划.md",
     "12_算法/回溯搜索.md",
     "12_算法/链表算法.md",
