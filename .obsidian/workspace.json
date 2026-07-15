@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_需求/音视频.md",
+                "file": "14_经验/01 输出.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "音视频"
+              "title": "01 输出"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_需求/音视频.md",
+                "file": "14_经验/01 输出.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "音视频 的大纲"
+              "title": "01 输出 的大纲"
             }
           },
           {
@@ -206,8 +206,10 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
-    "12_算法/01学习笔记.md",
     "13_需求/音视频.md",
+    "14_经验/01 输出.md",
+    "14_经验",
+    "12_算法/01学习笔记.md",
     "12_算法/数组排序算法.md",
     "13_需求/视频点播——自适应缓冲预加载策略.md",
     "13_需求/数据库版本迁移.md",
@@ -236,7 +238,6 @@
     "12_算法",
     "Untitled.canvas",
     "0_核心原理/260414-代理模式笔记.md",
-    "0_核心原理/260413-Window概念笔记.md",
-    "0_核心原理/260413-startActivity到handleLaunchActivity完整链路.md"
+    "0_核心原理/260413-Window概念笔记.md"
   ]
 }
