@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "c17ece79b12d6a60",
@@ -204,7 +204,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1bbc1528b8606787",
+  "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
     "13_需求/音视频.md",
     "14_经验/01 输出.md",
