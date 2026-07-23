@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_经验/待二次整理/Vega Os 调研.md",
+                "file": "14_经验/05 折叠屏适配.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vega Os 调研"
+              "title": "05 折叠屏适配"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_经验/待二次整理/Vega Os 调研.md",
+                "file": "14_经验/05 折叠屏适配.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Vega Os 调研 的大纲"
+              "title": "05 折叠屏适配 的大纲"
             }
           },
           {
@@ -206,8 +206,8 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
-    "14_经验/待二次整理/Retrofit.md",
     "14_经验/待二次整理/Vega Os 调研.md",
+    "14_经验/待二次整理/Retrofit.md",
     "9_框架/260417-Executor框架.md",
     "14_经验/待二次整理/框架.md",
     "14_经验/待二次整理/架构.md",
