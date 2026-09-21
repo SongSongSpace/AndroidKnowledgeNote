@@ -57,3 +57,14 @@ t 会话活跃时间。`t=0 0` 表示会话不设时间限制。
 
 c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址。
 但：在WebRTC 中，真正的可达地址由 ICE 候选决定。c= 只是一个占位符。
+
+媒体关键属性
+
+`a=mid:` 媒体标识符。用于在 BUNDLE 分组中引用这个 `m=`字段： `a=mid:a1`。
+`a=sendrecv`：方向属性。表示这个媒体既可以发送也可以接收。`sendonly` `recvonly` `inactive`。
+`a=rtpmap`：将 `m=`行中的数字负载类型映射到具体的编解码器。
+	`a=rtpmap:96 opus/48000/2`
+	`a=rtpmap:0 PCMU/8000`
+	`a=rtpmap:8 PCMA/8000`
+`a=fmtp`：编解码器的附加参数。
+``
