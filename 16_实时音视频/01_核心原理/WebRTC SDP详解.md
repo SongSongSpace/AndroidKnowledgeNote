@@ -36,4 +36,17 @@ o 会话发起者信息，格式为 `o=<username> <sess-id> <sess-version> <nett
 s 会话名称。无实际意义，固定为 - 。
 t 会话活跃时间。`t=0 0` 表示会话不设时间限制。
 
+`a=group:BUNDLE a1 v1`
+`a=ice-options:trickle`
+`a=msid-semantic:WMS`
+
+`a=group:BUNDLE a1 v1` 指示音频和视频的 m= 行使用同一个传输通道。
+`a=ice-options:trickle` 表示支持 Trickle ICE，即 ICE 候选可以边收集边发送，不必等全部收集完再发。
+`a=msid-semantic:WMS` 定义媒体流标识语义，用于将多个 track 关联到同一个 MediaStream。
+
 **媒体级**
+
+`m=audio 10100 UDP/TLS/RTP/SAVPF 96 0 8 97 98`，格式：m=<媒体类型> <端口> <传输协议> <负载类型列表...>``
+
+**媒体类型**：audio、video 或 application。数据通道使用 application。
+**端口**：
