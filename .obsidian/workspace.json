@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16_实时音视频/00_RTC_MOC.md",
+                "file": "16_实时音视频/01_核心原理/WebRTC SDP详解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_RTC_MOC"
+              "title": "WebRTC SDP详解"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "c17ece79b12d6a60",
@@ -158,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "16_实时音视频/00_RTC_MOC.md",
+                "file": "16_实时音视频/01_核心原理/WebRTC SDP详解.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -208,6 +209,8 @@
   },
   "active": "bf5df3a46713e28a",
   "lastOpenFiles": [
+    "16_实时音视频/00_RTC_MOC.md",
+    "16_实时音视频/01_核心原理/WebRTC SDP详解.md",
     "16_实时音视频/11_问题速记",
     "16_实时音视频/10_场景与需求",
     "16_实时音视频/09_测试与运维",
@@ -219,8 +222,6 @@
     "16_实时音视频/03_架构与设计",
     "16_实时音视频/02_网络与传输",
     "0_核心原理/260415-三次握手.md",
-    "16_实时音视频/00_RTC_MOC.md",
-    "16_实时音视频/01_核心原理",
     "0_核心原理/260414-线程池.md",
     "98_待学/待钻研.md",
     "11_AI赋能/RAG.md",
