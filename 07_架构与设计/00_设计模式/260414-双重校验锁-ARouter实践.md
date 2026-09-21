@@ -1,4 +1,4 @@
-
+DCL 设计模式
 ## ARouter 对象创建实践「双重校验锁」
 ```java
 private volatile static boolean hasInit = false;
