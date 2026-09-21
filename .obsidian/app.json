@@ -3,5 +3,6 @@
   "useMarkdownLinks": true,
   "showLineNumber": false,
   "showInlineTitle": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "alwaysUpdateLinks": true
 }
