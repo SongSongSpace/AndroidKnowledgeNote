@@ -150,4 +150,24 @@ a=candidate:0 1 UDP 2113667327 192.168.1.5 10100 typ host
 a=end-of-candidates
 ```
 
-这条回答表明：1、对方选择了 96 映射的格式作为音频编解码器。2、双方互发。3、对方主动发起DTLS 握手。由于我方 actpass 表示
+这条回答表明：1、对方选择了 96 映射的格式作为音频编解码器。2、双方互发。3、对方主动发起DTLS 握手。由于我方 actpass 表示愿意接受任一角色，所以对方作出最终决定。
+
+# 五、重要概念
+
+### BUNDLE：让音视频公用一个通道
+
+每个 m= 段如果各自使用独立端口和 ICE 连接，WebRTC 的建连开销会翻倍。BUNDLE 扩展允许将多个 m= 段绑定到一个传输通道上。
+
+实现方式很简单：在会话级加 `a=group:BUNDLE a1 v1`，然后各个 m= 段使用**相同的端口和相同的 ICE 凭证**。这样 ICE 只需要对一组地址做连通性检查，DTLS 也只需要握手一次。
+
+### Trickle ICE：不必等候选收集完
+
+传统流程要求 ICE 候选全部收集完毕后才发送 Offer/Answer，但在网络环境复杂时，收集所有候选可能需要数秒。Trickle ICE 允许在 Offer/Answer 中只包含部分候选（甚至不含候选），后续通过信令通道逐步发送 `a=candidate` 行，`a=end-of-candidates` 标记结束。这能显著缩短建连延迟[](https://datatracker.ietf.org/doc/html/draft-uberti-rtcweb-rfc8829bis-05#10)。
+
+# 六、核心价值
+
+‼️ 理解**协商逻辑**：
+- Offer 说“我能做这些”，Answer 从 Offer 的子集中选“我们就用这些”。
+- Answer 不能凭空创造 Offer 中不存在的编解码器或属性。
+- 方向（sendrecv/sendonly/recvonly）决定了媒体的流向。
+- ICE 候选和 DTLS fingerprint 是 WebRTC 特有的扩展，标准 SDP（RFC 4566）本身不包含这些，它们是 WebRTC 生态在 SDP 上的叠加。
