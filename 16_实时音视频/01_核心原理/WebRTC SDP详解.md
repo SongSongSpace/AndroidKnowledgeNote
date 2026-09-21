@@ -62,9 +62,30 @@ c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址
 
 `a=mid:` 媒体标识符。用于在 BUNDLE 分组中引用这个 `m=`字段： `a=mid:a1`。
 `a=sendrecv`：方向属性。表示这个媒体既可以发送也可以接收。`sendonly` `recvonly` `inactive`。
-`a=rtpmap`：将 `m=`行中的数字负载类型映射到具体的编解码器。
+`a=rtpmap:`：将 `m=`行中的数字负载类型映射到具体的编解码器。
 	`a=rtpmap:96 opus/48000/2`
 	`a=rtpmap:0 PCMU/8000`
 	`a=rtpmap:8 PCMA/8000`
-`a=fmtp`：编解码器的附加参数。
-``
+`a=fmtp:`：编解码器的附加参数。
+`a=extmap:`：RTP 头部扩展映射。
+
+**ICE 相关属性**
+
+`a=ice-ufrag` 和 `a=ice-pwd`：ICE 身份验证凭证，双方用它们来验证连接检查请求的合法性。
+`a=candidate:` 候选地址，格式包含候选类型（`host` 表示本机地址，`srflx` 表示通过 STUN 发现的公网映射地址）、优先级、IP、端口和传输协议。
+`a=end-of-candidates`：标识候选收集已完成。在 Trickle ICE 场景下，候选会在 Offer/Answer 发送后通过信令单独发送，这个标记表示不再有新的候选了。
+
+### DTLS 安全相关属性
+
+`a=fingerprint`：DTLS 证书的哈希指纹。双方在 DTLS 握手时交换证书，并比对证书的哈希值是否与 SDP 中的 fingerprint 一致，以此来防止中间人攻击。
+`a=setup`：DTLS 连接的角色协商。`actpass` 表示“我既可以主动发起也可以被动接受”，由 Answer 方决定最终角色（`active` 或 `passive`）。
+
+# 四、Offer/Answer 完整流程与示例
+
+### 流程概览
+
+1. Alice 调用 `createOffer()`，浏览器生成包含上述所有信息的 SDP Offer。
+2. Alice 通过信令服务器将 Offer 发送给 Bob。
+3. Bob 收到 Offer 后，调用 `setRemoteDescription()`，再调用 `createAnswer()`，生成自己的 SDP Answer。
+4. Bob 将 Answer 通过信令服务器发回 Alice，Alice 调用 `setRemoteDescription()` 设置远端描述。
+5. ICE 连通性检查完成后，媒体开始传输。
