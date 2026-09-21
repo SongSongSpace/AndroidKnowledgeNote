@@ -11,6 +11,16 @@
             "id": "bf5df3a46713e28a",
             "type": "leaf",
             "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
+            "id": "e13d54517d487462",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "04_音视频技术/00_通用基础/01_核心原理/采集-Android抓屏方案技术总结.md",
@@ -21,7 +31,8 @@
               "title": "采集-Android抓屏方案技术总结"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -41,7 +52,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
+                "autoReveal": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -96,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "0_核心原理/260414-协程基础.md",
+                "file": "04_音视频技术/00_通用基础/01_核心原理/采集-Android抓屏方案技术总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 260414-协程基础"
+              "title": "反向链接"
             }
           },
           {
@@ -173,8 +184,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -187,13 +198,11 @@
               "title": "git-history-view"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 350.5,
-    "collapsed": true
+    "width": 350.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -207,8 +216,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bf5df3a46713e28a",
+  "active": "c46483cfc35ec3fe",
   "lastOpenFiles": [
+    "04_音视频技术/00_通用基础/01_核心原理/采集-Android抓屏方案技术总结.md",
+    "04_音视频技术/01_RTC/01_核心原理/RTC-WebRTC 媒体采集API.md",
+    "01_基础与系统/02_代码片段与实践/Android-循环操作注意事项.md",
+    "04_音视频技术/01_RTC/00_RTC_MOC.md",
+    "04_音视频技术/03_投屏与多屏互动/01_核心原理/投屏-设备发现与厂商生态调研.md",
+    "05_AI 与算法/01_核心原理/03_大模型与LLM/LLM-RAG搜索增强生成.md",
+    "05_AI 与算法/01_核心原理/02_基础算法/算法-BFS与DFS.md",
+    "05_AI 与算法/01_核心原理/01_数据结构/算法-链表.md",
     "07_架构与设计/01_设计模式/设计模式-双重校验锁与ARouter实践.md",
     "07_架构与设计/01_设计模式/设计模式-代理模式.md",
     "06_工程与运维/02_测试与质量/质量-Lighthouse性能审计.md",
@@ -217,24 +234,16 @@
     "05_AI 与算法/01_核心原理/04_深度学习/深度学习-手写数字识别.md",
     "05_AI 与算法/01_核心原理/03_大模型与LLM/LLM-Agent 原理与架构.md",
     "05_AI 与算法/01_核心原理/03_大模型与LLM/LLM-提示词工程.md",
-    "05_AI 与算法/01_核心原理/03_大模型与LLM/LLM-RAG搜索增强生成.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-贪心.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-最短路径.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-数组排序.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-回溯搜索.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-动态规划.md",
-    "05_AI 与算法/01_核心原理/02_基础算法/算法-BFS DFS 搜索.md",
-    "05_AI 与算法/01_核心原理/01_数据结构/算法-链表算法.md",
     "05_AI 与算法/01_核心原理/01_数据结构/算法-数据结构.md",
-    "04_音视频技术/01_RTC/01_核心原理/RTC-WebRTC 媒体采集API.md",
     "04_音视频技术/01_RTC/01_核心原理/RTC-WebRTC SDP详解.md",
     "02_UI 与交互/02_代码片段与实践/UI-AndroidSearchView使用与实践.md",
     "02_UI 与交互/02_代码片段与实践/UI-弹窗延迟实例化躲避动效.md",
     "01_基础与系统/04_架构与设计/Android-数据库版本迁移.md",
-    "01_基础与系统/03_踩坑与解决/Android-ANR 治理与排查.md",
-    "01_基础与系统/02_代码片段与实践/并发-串行并发同步异步实践.md",
-    "01_基础与系统/02_代码片段与实践/代码-循环操作注意事项.md",
-    "00_Inbox_收件箱/待分类速记/260410-问题列表.md",
     "05_AI 与算法/01_核心原理/04_深度学习",
     "05_AI 与算法/01_核心原理/03_大模型与LLM",
     "05_AI 与算法/00_资源",
