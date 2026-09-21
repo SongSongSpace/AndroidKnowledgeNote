@@ -46,7 +46,14 @@ t 会话活跃时间。`t=0 0` 表示会话不设时间限制。
 
 **媒体级**
 
-`m=audio 10100 UDP/TLS/RTP/SAVPF 96 0 8 97 98`，格式：m=<媒体类型> <端口> <传输协议> <负载类型列表...>``
+`m=audio 10100 UDP/TLS/RTP/SAVPF 96 0 8 97 98`，格式：==m=<媒体类型> <端口> <传输协议> <负载类型列表...>``==
 
-**媒体类型**：audio、video 或 application。数据通道使用 application。
-**端口**：
+媒体类型：audio、video 或 application。数据通道使用 application。
+端口：接收该媒体的端口号。
+传输协议：UDP/TLS/RTP/SAVPF 是 WebRTC 的标准值——UDP 承载，TLS 加密，RTP 用于媒体，SAVPF 表示带反馈的安全音频视频配置文件。
+负载类型列表：一组数字，每个数字对应一个具体的编解码格式。
+
+**连接信息**
+
+c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址。
+但：在WebRTC 中，真正的可达地址由 ICE 候选决定。c= 只是一个占位符。
