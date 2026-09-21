@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "个人知识库目录架构说明书.md",
-                "mode": "source",
+                "file": "06_工程与运维/01_发布与部署/发布-GooglePlay上架流程.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "个人知识库目录架构说明书"
+              "title": "发布-GooglePlay上架流程"
             }
           }
         ]
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag: c",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -76,12 +76,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 434.01171875,
-    "collapsed": true
+    "width": 434.01171875
   },
   "right": {
     "id": "c17ece79b12d6a60",
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "个人知识库目录架构说明书.md",
+                "file": "06_工程与运维/01_发布与部署/发布-GooglePlay上架流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -207,10 +207,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e13d54517d487462",
+  "active": "aaf2274ac5da037b",
   "lastOpenFiles": [
-    "04_音视频技术/00_音视频_MOC.md",
+    "04_音视频技术/02_RTC/01_核心原理/RTC-WebRTC SDP详解.md",
     "个人知识库目录架构说明书.md",
+    "04_音视频技术/00_音视频_MOC.md",
     "未命名",
     "05_AI 与算法/00_AI与算法.md",
     "03_网络与协议/00_网络与协议_MOC.md",
@@ -235,7 +236,6 @@
     "05_AI 与算法/01_核心原理/02_基础算法/算法-贪心.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-最短路径.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-数组排序.md",
-    "05_AI 与算法/01_核心原理/02_基础算法/算法-回溯搜索.md",
     "05_AI 与算法/01_核心原理/04_深度学习",
     "05_AI 与算法/01_核心原理/03_大模型与LLM",
     "05_AI 与算法/00_资源",
