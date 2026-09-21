@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_音视频技术/00_音视频_MOC.md",
+                "file": "个人知识库目录架构说明书.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_音视频_MOC"
+              "title": "个人知识库目录架构说明书"
             }
           }
         ]
@@ -80,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 434.01171875
+    "width": 434.01171875,
+    "collapsed": true
   },
   "right": {
     "id": "c17ece79b12d6a60",
@@ -96,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_音视频技术/00_音视频_MOC.md",
+                "file": "个人知识库目录架构说明书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -206,11 +207,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a36e15900f34c94",
+  "active": "e13d54517d487462",
   "lastOpenFiles": [
+    "04_音视频技术/00_音视频_MOC.md",
+    "个人知识库目录架构说明书.md",
     "未命名",
     "05_AI 与算法/00_AI与算法.md",
-    "04_音视频技术/00_音视频_MOC.md",
     "03_网络与协议/00_网络与协议_MOC.md",
     "02_UI 与交互/00_UI与交互_MOC.md",
     "01_基础与系统/00_基础与系统_MOC.md",
@@ -243,7 +245,6 @@
     "04_音视频技术/03_点播与直播/04_性能与弱网优化",
     "06_工程与运维/03_运维与监控",
     "09_经验与复盘/03_方法论",
-    "09_经验与复盘/02_项目复盘",
     "Untitled.canvas"
   ]
 }
