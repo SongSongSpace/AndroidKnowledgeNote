@@ -98,6 +98,6 @@ lock.release();  // 释放
 ```
 
 ### 🔑 关联笔记
-[[Lighthouse - 状态驱动的网络设备搜索](../../06_工程与运维/02_测试与质量/260415-Lighthouse.md)]
+[[Lighthouse - 状态驱动的网络设备搜索](../../06_工程与运维/02_测试与质量/质量-Lighthouse性能审计.md)]
 
 [[AndroidSearchView - 官方搜索示例](../../02_UI%20与交互/02_代码片段与实践/UI-AndroidSearchView使用与实践.md)]
