@@ -1,1 +1,10 @@
-安卓应用的采集：[[../../01_通用基础/01_核心原理/采集-Android抓屏方案技术总结]]
+#技术栈/WebRTC
+# 一、核心模型
+
+无论是浏览器还是 Android，WebRTC 的媒体采集都围绕两个核心对象运转：
+
+**MediaStream**
+
+**MediaStreamTrack**
+
+
