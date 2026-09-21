@@ -133,4 +133,21 @@ a=candidate:0 1 UDP 2113667327 192.168.1.4 10100 typ host
 a=end-of-candidates
 ```
 
-`a=group:BUNDLE a1 v1`：代表音视频复用同一个传输通道。从两条媒体流的端口都是 10100，且 ICE 凭证和 fingerprint 
+1、`a=group:BUNDLE a1 v1`：代表音视频复用同一个传输通道。从两条媒体流的端口都是 10100，且 ICE 凭证和 fingerprint 相同，这都是 BUNDLE 生效的表现。2、actpass 表示我方愿意接受任一角色。
+
+### Answer
+
+```
+m=audio 10100 UDP/TLS/RTP/SAVPF 96
+a=mid:a1
+a=sendrecv
+a=rtpmap:96 opus/48000/2
+a=ice-ufrag:c300d85b
+a=ice-pwd:de4e99bd291c325921d5d47efbabd9a2
+a=fingerprint:sha-256 6B:8B:F0:65:5F:78:E2:51...
+a=setup:active
+a=candidate:0 1 UDP 2113667327 192.168.1.5 10100 typ host
+a=end-of-candidates
+```
+
+这条回答表明：1、对方选择了 96 映射的格式作为音频编解码器。2、双方互发。3、对方主动发起DTLS 握手。由于我方 actpass 表示
