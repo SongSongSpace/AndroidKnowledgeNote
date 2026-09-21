@@ -2,5 +2,6 @@
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
   "showLineNumber": false,
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "strictLineBreaks": true
 }
