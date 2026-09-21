@@ -24,7 +24,7 @@ SDP（Session Description Protocol）就是用来说明**本端可承担的功�
 
 # 三、逐行拆解
 
-**会话级**
+### 会话级
 
 `v=0`
 `o=- 4962303333179871722 1 IN IP4 0.0.0.0`
@@ -44,7 +44,7 @@ t 会话活跃时间。`t=0 0` 表示会话不设时间限制。
 `a=ice-options:trickle` 表示支持 Trickle ICE，即 ICE 候选可以边收集边发送，不必等全部收集完再发。
 `a=msid-semantic:WMS` 定义媒体流标识语义，用于将多个 track 关联到同一个 MediaStream。
 
-**媒体级**
+### 媒体级
 
 `m=audio 10100 UDP/TLS/RTP/SAVPF 96 0 8 97 98`，格式：==m=<媒体类型> <端口> <传输协议> <负载类型列表...>``==
 
@@ -53,7 +53,7 @@ t 会话活跃时间。`t=0 0` 表示会话不设时间限制。
 传输协议：UDP/TLS/RTP/SAVPF 是 WebRTC 的标准值——UDP 承载，TLS 加密，RTP 用于媒体，SAVPF 表示带反馈的安全音频视频配置文件。
 负载类型列表：一组数字，每个数字对应一个具体的编解码格式。
 
-**连接信息**
+### 连接信息
 
 c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址。
 但：在WebRTC 中，真正的可达地址由 ICE 候选决定。c= 只是一个占位符。
@@ -69,7 +69,7 @@ c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址
 `a=fmtp:`：编解码器的附加参数。
 `a=extmap:`：RTP 头部扩展映射。
 
-**ICE 相关属性**
+### ICE 相关属性
 
 `a=ice-ufrag` 和 `a=ice-pwd`：ICE 身份验证凭证，双方用它们来验证连接检查请求的合法性。
 `a=candidate:` 候选地址，格式包含候选类型（`host` 表示本机地址，`srflx` 表示通过 STUN 发现的公网映射地址）、优先级、IP、端口和传输协议。
@@ -89,3 +89,48 @@ c= 行。如 `c=IN IP4 203.0.113.100` 。指示媒体传输的目标网络地址
 3. Bob 收到 Offer 后，调用 `setRemoteDescription()`，再调用 `createAnswer()`，生成自己的 SDP Answer。
 4. Bob 将 Answer 通过信令服务器发回 Alice，Alice 调用 `setRemoteDescription()` 设置远端描述。
 5. ICE 连通性检查完成后，媒体开始传输。
+
+### 简化的 Offer
+
+```
+v=0
+o=- 4962303333179871722 1 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=ice-options:trickle
+a=group:BUNDLE a1 v1
+
+m=audio 10100 UDP/TLS/RTP/SAVPF 96 0 8 97 98
+c=IN IP4 203.0.113.100
+a=mid:a1
+a=sendrecv
+a=rtpmap:96 opus/48000/2
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:97 telephone-event/8000
+a=rtpmap:98 telephone-event/48000
+a=fmtp:97 0-15
+a=fmtp:98 0-15
+a=ice-ufrag:074c6550
+a=ice-pwd:a28a397a4c3f31747d1ee3474af08a068
+a=fingerprint:sha-256 29:E2:1C:3B:4B:9F:81:E6:B8:5C:F4:A5:A8:D8:73...
+a=setup:actpass
+a=candidate:0 1 UDP 2113667327 192.168.1.4 10100 typ host
+a=end-of-candidates
+
+m=video 10100 UDP/TLS/RTP/SAVPF 120 121
+c=IN IP4 203.0.113.100
+a=mid:v1
+a=sendrecv
+a=rtpmap:120 VP8/90000
+a=rtpmap:121 rtx/90000
+a=fmtp:121 apt=120
+a=ice-ufrag:074c6550
+a=ice-pwd:a28a397a4c3f31747d1ee3474af08a068
+a=fingerprint:sha-256 29:E2:1C:3B...
+a=setup:actpass
+a=candidate:0 1 UDP 2113667327 192.168.1.4 10100 typ host
+a=end-of-candidates
+```
+
+`a=group:BUNDLE a1 v1`：代表音视频复用同一个传输通道。从两条媒体流的端口都是 10100，且 ICE 凭证和 fingerprint 
