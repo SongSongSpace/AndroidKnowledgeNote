@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/Retrofit.md",
+                "file": "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Retrofit"
+              "title": "源码-Android 核心机制与系统启动流程整理"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/Retrofit.md",
+                "file": "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,6 +208,10 @@
   },
   "active": "e13d54517d487462",
   "lastOpenFiles": [
+    "01_基础与系统/01_核心原理/源码-APT注解处理原理.md",
+    "01_基础与系统/01_核心原理/源码-startActivity到handleLaunchActivity完整链路.md",
+    "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
+    "00_Inbox_收件箱/待二次整理/Retrofit.md",
     "00_Inbox_收件箱/待二次整理/Framwork.md",
     "00_Inbox_收件箱/待二次整理/Flutter.md",
     "00_Inbox_收件箱/待二次整理/Fire Tv.md",
@@ -231,10 +235,6 @@
     "04_音视频技术/02_RTC/00_RTC_MOC.md",
     "05_AI 与算法/01_核心原理/03_大模型与LLM/LLM-RAG搜索增强生成.md",
     "05_AI 与算法/01_核心原理/02_基础算法/算法-BFS与DFS.md",
-    "05_AI 与算法/01_核心原理/01_数据结构/算法-链表.md",
-    "07_架构与设计/01_设计模式/设计模式-双重校验锁与ARouter实践.md",
-    "07_架构与设计/01_设计模式/设计模式-代理模式.md",
-    "06_工程与运维/02_测试与质量/质量-Lighthouse性能审计.md",
     "05_AI 与算法/01_核心原理/04_深度学习",
     "05_AI 与算法/01_核心原理/03_大模型与LLM",
     "05_AI 与算法/00_资源",
