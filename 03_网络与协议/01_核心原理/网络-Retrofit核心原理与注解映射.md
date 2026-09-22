@@ -1,5 +1,7 @@
 #技术栈/Retrofit #技术栈/OkHttp 
 
+🔗[[并发]]
+
 **是什么？**
 
 Square 公司基于  OkHttp 封装的网络请求框架。
