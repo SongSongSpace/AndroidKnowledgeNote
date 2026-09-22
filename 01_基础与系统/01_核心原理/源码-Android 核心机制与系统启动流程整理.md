@@ -54,77 +54,58 @@ Android 中常见的进程间通信机制包括：
 - 返回对象是调用 `ProcessState` 的 `getContextObject` 函数得到的。
 
 调用链：
-cpp
-
-
+```cpp
+gDefaultServiceManager = interface_cast<IServiceManager>(
+    ProcessState::self()->getContextObject(NULL)
+);
+```
 
 进一步：
-
-text
-
+```text
 getContextObject -> getStrongProxyForHandle -> 返回 BpBinder(handle)
+```
 
 ## 5. BpBinder 与 BBinder
 
-|类型|角色|说明|
-|---|---|---|
-|`BpBinder`|客户端代理类|`p` 即 Proxy；用于与 Server 交互|
-|`BBinder`|目的端|proxy 交互的相对端|
-|对应关系|一一对应|`BpBinder` 通过 `handle` 标识对应的 `BBinder`|
-|ServiceManager 场景|handle 值为 0|因为它是 ServiceManager 的客户端，所以使用代理端与 ServiceManager 交互|
-|与 Binder 设备关系|不直接交互|`BBinder` / `BpBinder` 没有和 Binder 设备直接交互|
+| 类型                | 角色          | 说明                                                  |
+| ----------------- | ----------- | --------------------------------------------------- |
+| `BpBinder`        | 客户端代理类      | `p` 即 Proxy；用于与 Server 交互                           |
+| `BBinder`         | 目的端         | proxy 交互的相对端                                        |
+| 对应关系              | 一一对应        | `BpBinder` 通过 `handle` 标识对应的 `BBinder`              |
+| ServiceManager 场景 | handle 值为 0 | 因为它是 ServiceManager 的客户端，所以使用代理端与 ServiceManager 交互 |
+| 与 Binder 设备关系     | 不直接交互       | `BBinder` / `BpBinder` 没有和 Binder 设备直接交互            |
 
 `BpBinder` 是 `defaultServiceManager` 的“道具”。
-
 ## 6. interface_cast 与 IServiceManager
 
 - `interface_cast`：模板函数，将 `BpBinder` 指针转换成 `IServiceManager` 对象并返回。
-    
 - 它利用 `BpBinder` 对象作为参数新建一个 `BpServiceManager` 对象，其 `mRemote` 值是 `BpBinder`。
-    
 - `IServiceManager` 的业务函数由 `BpServiceManager` 对象实现。
-    
-
 ## 7. 注册 MediaPlayerService
 
 ### 7.1 业务层工作
 
 调用路径：
-
-text
-
+```text
 defaultServiceManager() -> addService -> transact()
+```
 
 要点：
-
 - 注册服务时，实现 `defaultServiceManager()`、`addService()`。
-    
 - `addService()` 返回 `IServiceManager`，实际是 `BpServiceManager`。
-    
 - `addService()` 中：
-    
     - `Parcel data, reply;`
-        
     - `remote()->transact()` 会返回 `BpBinder` 对象。
-        
 - `addService` 中把请求数据打包成 `data` 后，传给 `BpBinder` 的 `transact` 函数，即把通信工作交给 `BpBinder`。
-    
 - 本质：将请求信息打包后，交给通信层处理。
-    
-
 ### 7.2 通信层工作：IPCThreadState
 
 - `BpBinder` 把 `transact` 工作交给 `IPCThreadState#transact()`。
-    
 
 **TLS：Thread Local Storage，线程本地存储空间**
-
 - 每个线程都有这种空间。
-    
 - 线程间不共享。
-    
 - 通过 `pthread_getspecific` / `pthread_setspecific` 获取或设置空间中的内容。
-    
 
 `IPCThreadState` 中：
 
@@ -135,38 +116,28 @@ defaultServiceManager() -> addService -> transact()
 |类型|`Parcel`，可看作发送和接收命令的缓冲区|
 
 消息码约定：
-
 - 应用程序向 Binder 设备发送消息的消息码以 `BC_` 开头。
-    
 - 反过来以 `BR_` 开头。
-    
 
 流程：
-
-text
-
+```text
 先发数据：writeTransactionData()
 再等结果：waitForResponse() -> talkWithDriver()
 处理：executeCommand()
 talkWithDriver()：与 Binder 设备交互
+```
 
 ## 8. StartThreadPool 与 joinThreadPool
 
 启动线程池调用链：
-
-text
-
+```text
 StartThreadPool -> spawnPooledThread(true) -> new PoolThread(true) -> joinThreadPool(true)
+```
 
 `joinThreadPool` 要点：
-
 - 请求信息写到 `mOut` 中，等会儿一起发出去。
-    
 - 处理死亡的 `BBinder` 对象。
-    
 - 发送命令读取请求：`talkWithDriver()`。
-    
-
 ---
 
 # 二、SystemServer 进程
@@ -174,80 +145,63 @@ StartThreadPool -> spawnPooledThread(true) -> new PoolThread(true) -> joinThread
 ## 1. 作用
 
 SystemServer 用于创建系统服务，例如：
-
 - AMS
-    
 - ATMS
-    
 - WNS
-    
 - PMS
-    
 
 其进程名为：
-
-text
-
+```text
 system_server
+```
 
 主要工作：
 
 1. 启动 Binder 线程池，用于与其他进程进行 Binder 通信。
-    
 2. 创建 `SystemServiceManager`，用于启动、创建和管理服务。
-    
 3. 启动各种系统服务，分为：
-    
     - 引导服务
-        
     - 核心服务
-        
     - 其他服务
-        
-
 ## 2. ZygoteInit#zygoteInit 参数
-
-java
-
+```java
 ZygoteInit#zygoteInit(
     int targetSdkVersion,
     long[] disableCompatChanges,
     String[] args,
     ClassLoader classLoader
 )
+```
 
 |参数|说明|
 |---|---|
 |`targetSdkVersion`|系统设置的目标 SDK 版本|
 |`disabledCompatChanges`|禁用的一些兼容选项|
 |`argv`|传递给虚拟机的启动参数，也就是 `main` 方法接收到的参数|
-
 ## 3. 启动 Binder 线程池
 
 调用链：
-
-text
-
+```text
 ZygoteInit.nativeZygoteInit()
     -> ProcessState#startThreadPool
     -> 启动 Binder 线程池
+```
 
 ## 4. 设置虚拟机的 TargetSDKVersion
 
-text
-
+```text
 RuntimeInit#applicationInit
     -> 根据传入参数启动 Java Main 方法
     -> findStaticMain()
     -> 使用反射创建入口类
+```
 
 ## 5. SystemServer#main
-
-java
-
+```java
 public static void main(String[] args) {
     new SystemServer().run();
 }
+```
 
 `run()` 主要步骤：
 
@@ -265,28 +219,18 @@ public static void main(String[] args) {
 |10|开启 Loop 循环|
 
 ## 6. ActivityTaskManagerService 服务启动流程
-
 - 创建 `SystemServiceManager`，由它负责创建、启动和管理服务。
-    
 - `SystemServiceManager#startService`：注册服务、调用 `onStart()`。
-    
 - `ActivityTaskManagerService.Lifecycle#onStart`：
-    
     1. 将 `ActivityTaskManagerService` 对象注册到 `ServiceManager` 中，其他进程通过访问 `ServiceManager` 获取 ATMS 的代理对象。
-        
     2. 将 `ActivityTaskManagerService` 的内部类 `LocalService` 添加到本地服务列表。`LocalService` 不是一个 `IBinder` 对象，它用于当前进程内部使用 ATMS 服务。
-        
-
 ---
 
 # 三、Zygote 进程
-
 > 原文此处有 `strcmp()` 小标题，但未展开内容。
 
 ## 1. init.zygote64_32.rc
-
 `init.zygote64_32.rc` 文件包含两个 `service` 指令，对应两个 Zygote 进程。
-
 入口函数位于：
 
 text
