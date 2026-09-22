@@ -232,21 +232,16 @@ public static void main(String[] args) {
 ## 1. init.zygote64_32.rc
 `init.zygote64_32.rc` 文件包含两个 `service` 指令，对应两个 Zygote 进程。
 入口函数位于：
-
-text
-
+```text
 frameworks/base/cmds/app_process/app_main.cpp
+```
 
 ## 2. 两个 Zygote 进程
 
 ### 进程 1：Zygote 进程
-
 - 通过 `/system/bin/app_process64` 启动。
-    
 - 会创建一个名为 `zygote` 的 socket。
-    
 - 通过执行 `/system/bin/app_process64` 并传入参数启动 Zygote 进程。
-    
 
 参数如下（原文写“4 个参数”，实际列出 5 项）：
 
@@ -261,105 +256,59 @@ frameworks/base/cmds/app_process/app_main.cpp
 ### 进程 2：Zygote_secondary 进程
 
 - 通过 `/system/bin/app_process32` 启动。
-    
 - 会创建一个名为 `zygote_secondary` 的 socket。
-    
-
 ## 3. Zygote 进程入口函数
 
 流程如下：
-
 1. `frameworks/base/cmds/app_process/app_main.cpp`：创建 `AppRuntime` 对象。
-    
 2. 根据传入参数判断当前进程类型：
-    
     - Zygote
-        
     - 应用进程  
         不同进程开启不同的 `runtime.start()`：
-        
     - Zygote 启动，加载 `ZygoteInit`
-        
     - Application 启动模式，加载 `RuntimeInit`
-        
 3. `AppRuntime#start`
-    
 4. 继承自 `AndroidRuntime#start()`
-    
 5. 初始化 JNI 服务，创建启动 Dalvik 虚拟机。
-    
 6. 根据传入的 `className`，使用 JNI 调用 `ZygoteInit#static void main(String[] args)` 方法。
-    
 7. `ZygoteInit#main`
-    
 8. 预加载类和资源，子进程无需再加载。
-    
 9. 使用大量 systrace 监控方法执行性能。
-    
 10. 加载 Android 中的一些关键类：
-    
     - 公共资源
-        
     - 硬件抽象层
-        
     - 图形驱动
-        
     - 公共类库
-        
     - 公用文字资源
-        
     - WebView
-        
     - 用于 hook 的函数等
-        
 11. 这些预加载类定义在：
-    
-    text
-    
+```text
     frameworks/base/config/preloaded-classes
-    
+```
     Android 10 中一共有 1 万多个。  
     资源主要是加载 `framework-res.apk` 中的资源、OpenGL、WebView 等。常用的 `android.R` 文件就来自这里。
-    
 12. 创建服务端 Socket，用于与其他进程通信。
-    
 13. 启动 SystemServer 进程。
-    
 14. 首次启动时会通过 `fork` 自身的方式启动 SystemServer 进程，然后等待子进程 Socket 请求，通过 `fork Zygote` 快速创建一个已经初始化好的“Java 世界”。
-    
 15. 代码片段：
-    
-    java
-    
+```java
     Runnable r = forkSystemServer(abList, zygoteSocketName, zygoteServer);
     if (r != null) r.run();
-    
+```
 16. 子进程调用 `handleSystemServerProcess` 方法，返回 `Runnable` 对象。
-    
 17. 开启循环，等待客户端请求：`ZygoteServer#runSelectLoop`
-    
 18. 无限等待，等待 SystemServer 通知它创建进程。
-    
 19. 利用管道机制阻塞等待事件。
-    
 20. 优先处理已建立链接的事件，后处理新建链接的请求。
-    
-
 ## 4. Zygote 主要工作流程
 
 1. 启动 Android 系统中第一个 Java 虚拟机，并初始化 JNI，注册 Android 中的 JNI 函数。
-    
 2. 调用 Java 层 `ZygoteInit` 类的 `main` 函数，进入 Java 世界。
-    
 3. 建立 Socket 服务端，用于与客户端进行 IPC 通信，主要是接收 SystemServer 的启动 App 进程请求。
-    
 4. 预加载类、资源、WebView 等。
-    
 5. 通过 `fork` 自身的方式，启动 SystemServer 进程。
-    
 6. 调用 `runSelectLoopMode` 方法，进入无限循环，等待创建子进程的请求。
-    
-
 ---
 
 # 四、Init 进程
@@ -372,11 +321,9 @@ frameworks/base/cmds/app_process/app_main.cpp
 |2. 引导程序 BootLoader|Android 操作系统开始运行前的一个小程序，主要作用是把系统 OS 拉起来并运行|
 |3. Linux Kernel 启动|内核启动时，设置缓存、被保护存储器、计划列表、加载驱动。内核完成系统设置后，首先在系统文件中寻找 `init.rc` 文件，并启动 init 进程|
 |4. Init 进程启动|init 进程工作较多，主要用来初始化和启动属性服务，也用来启动 Zygote 进程|
-
 ## 2. Init 进程入口函数
 
 入口为 `main()` 方法。
-
 主要分支：
 
 |分支|作用|
@@ -390,50 +337,29 @@ frameworks/base/cmds/app_process/app_main.cpp
 ## 3. 第一阶段
 
 - `ueventd` / `watchdogd` 跳转
-    
 - 环境变量设置
-    
 - init crash 时重启引导加载程序
-    
 - 初始化日志输出
-    
 - 创建挂载相关文件目录
-    
 - 传入 `selinux_setup` 到 `main.cpp`，启用 SELinux 安全策略
-    
 - 初始化内核 log 系统
-    
-
 ## 4. 第二阶段
 
 - 创建进程会话密钥：创建和启动 `service` 命令指定的进程
-    
 - 初始化内核 Logging
-    
 - 初始化属性服务
-    
 - 为第二阶段设置安全策略，执行 SELinux 第二阶段并恢复一些文件安全上下文
-    
 - 新建 `epoll` 并初始化子进程终止信号处理函数
-    
 - 装载子进程信号处理，防止僵尸子进程无法回收
-    
 - 设置其他系统属性并开启属性服务
-    
 - 加载解析 `init.rc` 脚本，启动 Zygote 进程和其他进程
-    
-
 ## 5. init.rc 文件
 
 - 通过 `import` 导入对应的 Zygote 的 rc 文件。
-    
 - 主流厂商使用的是：
-    
-    text
-    
+```text
     init.zygote64_32.rc
-    
-
+```
 ---
 
 # 五、ActivityManagerService
@@ -443,146 +369,90 @@ frameworks/base/cmds/app_process/app_main.cpp
 `ActivityManagerService` 是 Android 中最核心的服务，负责系统中四大组件的启动、切换、调度及应用进程的管理和调度等工作。
 
 ## 2. 分析
-
 1. Android 系统服务在 SystemServer 进程创建后，通过其 `run()` 方法来启动各类服务。
-    
 2. AMS 在 SystemServer 中的 `startBootstrapServices` 方法中启动。
-    
-
 ---
 
 # 六、Activity 生命周期分析
 
 生命周期管理相关代码放在 `ActivityTaskManager` 中。
-
 ## 1. Attach：绑定数据
 
 Activity 被创建后，首先调用其 `attach` 方法，将一些数据与 Activity 进行绑定。
 
 要点：
-
 - 是 `final` 方法。
-    
 - 为 `FragmentManager` 绑定 Controller：
-    
-    java
-    
+```java
     mFragments.attachHost(/* params */);
-    
+```
 - 创建 Window：
-    
-    java
-    
+```java
     mWindow = new PhoneWindow(this, window, activityConfigCallback);
-    
+```
 - 初始化 Window：
-    
     - `setWindowControllerCallback`
-        
     - `setCallback`
-        
     - `setOnWindowDismissedCallback`
-        
     - `getLayoutInflater()`
-        
     - `setPrivateFactory()`
-        
     - `setSoftInputMode`
-        
     - `setUiOptions()`
-        
 - 初始化一系列变量。
-    
 - 为 Window 绑定 WindowManager。
-    
-
 ## 2. Create 阶段
 
 执行完 `attach` 之后，`ActivityThread` 将会调用 `Instrumentation` 中的 `callActivityOnCreate` 方法开启 Activity 的 Create 阶段。
 
 三个步骤：
-
 1. **预处理**
-    
     - `Instrumentation#prePerformCreate`
-        
     - 将同步启动的 Activity 从列表 `mWaitingActivities` 中移除。
-        
     - 过程包括：上锁、阻塞、等待、解除阻塞。
-        
 2. **回调 Activity 的 onCreate() 方法**
-    
     - `Activity#performCreate`
-        
     - 回调、通知 `FragmentManager` 分发 `onActivityCreated` 事件、调用 `ActivityLifecycleCallback` 方法。
-        
     - `Activity#onCreate`：
-        
         - 对于异常重启的 Activity 恢复一些数据。
-            
         - 调用 `dispatchActivityCreated` 来回调所有的 `ActivityLifecycleCallback`。
-            
 3. **收尾工作**
-    
     - `Instrumentation#postPerformCreate`
-        
     - 保证 Activity 从列表 `mWaitingActivities` 中移除。
-        
-
 ## 3. Start 阶段
 
 目标状态：`ON_RESUME`。
-
 顺序执行 Activity 的生命周期回调：`onStart` 和 `onResume`。
-
 相关组件：
-
 - `TransactionExecutor`
-    
 - `cycleToPath()`
-    
 - 一个路径的数组
-    
 - `performLifecycleSequence()`
-    
 - `ClientTransactionHandler`
-    
 
 流程：
-
-text
-
+```text
 ClientTransactionHandler.handleStartActivity()
     -> 回调 Activity#onStart()
     -> performStart()
     -> 恢复数据、调用 Activity 的 onPostCreate 方法
+```
 
 `Activity#performStart`：
-
 - 分发 `preStart` 事件
-    
 - 调用 `onStart`
-    
 - 分发 `postStart` 事件
-    
-
 ## 4. Resume 阶段
-
 目标状态：`ON_RESUME`。
-
 继续执行 `handleResumeActivity` 方法。
-
 判断 Activity 的 Window 是否已经添加到 WindowManager 中，是否真正需要显示。
-
 调用链：
-
-text
-
+```text
 WindowManagerImpl#addView
     -> WindowManagerGlobal#addView
     -> ViewRootImpl#setView
     -> 调用 WindowSession 中的 addToDisplay 方法
     -> 将 Window 与 WindowManagerService 绑定
+```
 
 Activity 的 Window 显示过程，包括 View 树的绘制过程，都是在 Activity 的 `ON_RESUME` 阶段完成的。
 
@@ -591,37 +461,21 @@ Activity 的 Window 显示过程，包括 View 树的绘制过程，都是在 Ac
 ## 5. Pause 阶段
 
 执行 `ActivityThread` 中的 `handlePauseActivity` 方法。
-
 触发原因：
-
 - 用户导致，如按下 back 键、home 键、点击跳转等。
-    
-
 调用：
-
 - `Activity#onUserInteraction`
-    
 - `Activity#onUserLeaveHint`
-    
 - `onSaveInstanceState`
-    
 
 `Activity#performPause`：
-
 - 分发 `prePause`、`onPause` 和 `postPause` 事件。
-    
-
 ## 6. Stop 阶段
 
 调用 `handleStopActivity`。
-
 要点：
-
 - stop 后隐藏 Activity 的 `DecorView` 显示。
-    
 - 保证 Activity 是处于 Pause 状态。
-    
-
 ### onSaveInstanceState 调用时机
 
 |版本阶段|调用时机|
@@ -631,46 +485,33 @@ Activity 的 Window 显示过程，包括 View 树的绘制过程，都是在 Ac
 |Android P 之后|`onSaveInstanceState` 在 `onStop` 调用之后被调用|
 
 `Activity#onStop()` 方法：
-
 - 停止 UI 的刷新
-    
 - 停止运行中的动画
-    
 - 隐藏填充
-    
-
 ## 7. Destroy 阶段
 
 完成 Activity 本身的销毁逻辑、通知 System Server 处理 Activity 栈相关的逻辑。
 
 执行：
-
-text
-
+```text
 ActivityThread#handleDestroyActivity
     -> performDestroyActivity
     -> 执行本地的销毁逻辑 + 通知 ATMS 更新系统服务
 
+```
 `Instrumentation.callActivityOnDestroy` 会回调 Activity 的 `performDestroy` 方法。
 
 与之前的生命周期类似，`performDestroy` 主要：
-
 - 分发 `preDestroy`、`destroy` 和 `postDestroy` 事件。
-    
 - 调用 `onDestroy` 生命周期回调。
-    
 
 `onDestroy` 方法中主要是保证 Activity 销毁时已经关闭了所有的由此 Activity 管理的：
 
 - Dialog
-    
 - Cursor
-    
 - SearchDialog
-    
 
 这样可以避免一些内存泄漏。
-
 ## 8. 非生命周期关键方法分析
 
 ### 1. onSaveInstanceState — 保存实例状态
