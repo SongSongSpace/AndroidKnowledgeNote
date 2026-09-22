@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
-                "mode": "source",
+                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "网络-Retrofit核心原理与注解映射"
+              "title": "Roku"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
+                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
+                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -192,7 +192,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 350.5
+    "width": 350.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,15 +209,15 @@
   },
   "active": "e13d54517d487462",
   "lastOpenFiles": [
+    "00_Inbox_收件箱/待二次整理/Fire Tv.md",
+    "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
     "03_网络与协议/01_核心原理/网络-LNA发现.md",
     "03_网络与协议/01_核心原理/网络-SSDP与UPnP协议笔记.md",
-    "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
     "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
     "00_Inbox_收件箱/待二次整理/Framwork.md",
     "01_基础与系统/01_核心原理/源码-APT注解处理原理.md",
     "01_基础与系统/01_核心原理/源码-startActivity到handleLaunchActivity完整链路.md",
     "00_Inbox_收件箱/待二次整理/Flutter.md",
-    "00_Inbox_收件箱/待二次整理/Fire Tv.md",
     "00_Inbox_收件箱/待分类速记/260410-问题列表.md",
     "00_Inbox_收件箱/待分类速记/01学习笔记.md",
     "00_Inbox_收件箱/待学清单.md.md",
