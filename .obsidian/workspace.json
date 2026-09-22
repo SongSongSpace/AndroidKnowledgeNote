@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/框架.md",
+                "file": "00_Inbox_收件箱/待二次整理/处理崩溃的工作流.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "框架"
+              "title": "处理崩溃的工作流"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/框架.md",
+                "file": "00_Inbox_收件箱/待二次整理/处理崩溃的工作流.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/框架.md",
+                "file": "00_Inbox_收件箱/待二次整理/处理崩溃的工作流.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -209,6 +209,12 @@
   },
   "active": "e13d54517d487462",
   "lastOpenFiles": [
+    "00_Inbox_收件箱/待二次整理/基础.md",
+    "00_Inbox_收件箱/待二次整理/后台保活.md",
+    "00_Inbox_收件箱/技术词.md",
+    "00_Inbox_收件箱/待二次整理/搜索重构.md",
+    "00_Inbox_收件箱/待二次整理/框架.md",
+    "00_Inbox_收件箱/待二次整理/架构.md",
     "00_Inbox_收件箱/待二次整理/缓存.md",
     "00_Inbox_收件箱/待二次整理/能力树.md",
     "00_Inbox_收件箱/待二次整理/配置订阅.md",
@@ -230,13 +236,7 @@
     "04_音视频技术/01_通用基础/01_核心原理/采集-Android抓屏方案技术总结.md",
     "04_音视频技术/02_RTC/01_核心原理/RTC-WebRTC SDP详解.md",
     "06_工程与运维/01_发布与部署/发布-GP审核被拒经验汇总.md",
-    "06_工程与运维/01_发布与部署/发布-GooglePlay上架流程.md",
-    "个人知识库目录架构说明书.md",
-    "04_音视频技术/00_音视频_MOC.md",
     "未命名",
-    "05_AI 与算法/00_AI与算法.md",
-    "03_网络与协议/00_网络与协议_MOC.md",
-    "02_UI 与交互/00_UI与交互_MOC.md",
     "05_AI 与算法/01_核心原理/04_深度学习",
     "05_AI 与算法/01_核心原理/03_大模型与LLM",
     "05_AI 与算法/00_资源",
