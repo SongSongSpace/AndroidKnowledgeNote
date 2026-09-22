@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
-                "mode": "preview",
+                "file": "00_Inbox_收件箱/待学清单.md.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Roku"
+              "title": "待学清单.md"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
+                "file": "00_Inbox_收件箱/待学清单.md.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_Inbox_收件箱/待二次整理/Roku.md",
+                "file": "00_Inbox_收件箱/待学清单.md.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -209,7 +209,11 @@
   },
   "active": "e13d54517d487462",
   "lastOpenFiles": [
-    "00_Inbox_收件箱/待二次整理/Fire Tv.md",
+    "00_Inbox_收件箱/待二次整理/能力树.md",
+    "01_基础与系统/01_核心原理/语言-Flutter.md",
+    "04_音视频技术/04_投屏与多屏互动/02_品牌/Fire Tv.md",
+    "04_音视频技术/04_投屏与多屏互动/02_品牌/Roku.md",
+    "04_音视频技术/04_投屏与多屏互动/02_品牌",
     "03_网络与协议/01_核心原理/网络-Retrofit核心原理与注解映射.md",
     "03_网络与协议/01_核心原理/网络-LNA发现.md",
     "03_网络与协议/01_核心原理/网络-SSDP与UPnP协议笔记.md",
@@ -217,7 +221,6 @@
     "00_Inbox_收件箱/待二次整理/Framwork.md",
     "01_基础与系统/01_核心原理/源码-APT注解处理原理.md",
     "01_基础与系统/01_核心原理/源码-startActivity到handleLaunchActivity完整链路.md",
-    "00_Inbox_收件箱/待二次整理/Flutter.md",
     "00_Inbox_收件箱/待分类速记/260410-问题列表.md",
     "00_Inbox_收件箱/待分类速记/01学习笔记.md",
     "00_Inbox_收件箱/待学清单.md.md",
@@ -234,8 +237,6 @@
     "02_UI 与交互/00_UI与交互_MOC.md",
     "01_基础与系统/00_基础与系统_MOC.md",
     "04_音视频技术/04_投屏与多屏互动/01_核心原理/投屏-设备发现与厂商生态调研.md",
-    "01_基础与系统/02_代码片段与实践/Android-循环操作注意事项.md",
-    "04_音视频技术/02_RTC/00_RTC_MOC.md",
     "05_AI 与算法/01_核心原理/04_深度学习",
     "05_AI 与算法/01_核心原理/03_大模型与LLM",
     "05_AI 与算法/00_资源",
@@ -244,7 +245,6 @@
     "04_音视频技术/01_通用基础",
     "04_音视频技术/03_点播与直播/04_性能与弱网优化",
     "06_工程与运维/03_运维与监控",
-    "09_经验与复盘/03_方法论",
     "Untitled.canvas"
   ]
 }
