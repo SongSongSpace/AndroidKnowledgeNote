@@ -31,4 +31,18 @@ SDP Offer/Answer 交换
 
 #### 安全加密
 
-DTLS-SRTP 默认加密
+DTLS-SRTP 默认加密所有媒体流
+
+#### 数据通道 
+
+RTCDataChannel 双向低延迟数据传输
+
+## 三、必要权限与硬件适配
+
+#### 权限
+
+必须申请**CAMERA**、**RECORD_AUDIO**、**INTERNET**、**MODIFY_AUDIO_SETTINGS** 等权限。
+
+#### 硬件要求
+
+在 Manifest 中声明对**摄像头**和 OpenGL ES 2.0 的ying xing
