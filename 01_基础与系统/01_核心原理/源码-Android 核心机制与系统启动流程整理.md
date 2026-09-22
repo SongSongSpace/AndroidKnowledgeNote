@@ -506,18 +506,14 @@ ActivityThread#handleDestroyActivity
 - 调用 `onDestroy` 生命周期回调。
 
 `onDestroy` 方法中主要是保证 Activity 销毁时已经关闭了所有的由此 Activity 管理的：
-
 - Dialog
 - Cursor
 - SearchDialog
 
 这样可以避免一些内存泄漏。
 ## 8. 非生命周期关键方法分析
-
 ### 1. onSaveInstanceState — 保存实例状态
-
 调用：`callActivityOnSaveInstanceState`
-
 调用时机：
 
 |版本阶段|调用时机|
@@ -527,13 +523,9 @@ ActivityThread#handleDestroyActivity
 |Android P 之后|`callActivityOnSaveInstanceState` 在 `onStop` 调用之后被调用|
 
 ### 2. onRestoreInstanceState — 恢复数据
-
 用于恢复数据。
-
 ### 3. retainNonConfigurationInstances
-
 用于保留非配置实例。
-
 ---
 
 # 七、关键系统进程启动流程
@@ -545,48 +537,32 @@ ActivityThread#handleDestroyActivity
 |init 进程|Linux/Android 系统用户空间的第一个进程，进程号 pid 为 1|
 |Zygote 进程|Java 世界的开创者|
 |property service|init 提供，用于管理 Android 系统的属性|
-
 init 负责创建系统中的几个关键进程。
-
 ## 2. Code analysis
 
 关键代码分析点：
-
 - 设置子进程退出的信号处理函数。
-    
 - 创建一些文件夹，并挂载设备。
-    
 - 设置 init 的日志输出设备。
-    
 - 解析 `init.rc` 配置文件。
-    
 - 获得机器的硬件名：
-    
-    text
-    
+```text
     get_hardware_name()
-    
+```
     对应一个机器相关的配置文件，解析它。
     
 - Init 将动作 Action 执行的时间划分为四个阶段：
-    
     - `early-init`
-        
     - `init`
-        
     - `early-boot`
-        
     - `boot`
-        
-    
     划分原因：有些动作必须在其他动作完成后才能执行。
-    
 
 ## 3. 开机画面
 
-text
-
+```text
 load_565rle_image(INIT_IMAGE_FILE)
+```
 
 失败时输出 “ANDROID” 字样。
 
@@ -601,32 +577,22 @@ load_565rle_image(INIT_IMAGE_FILE)
 `startActivitySafely` 中：
 
 - 通过设置 `FLAG_ACTIVITY_NEW_TASK` flag 让 Activity 在新的任务栈中启动。
-    
 - 代码：
-    
-    java
-    
+```java
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    
+```
 
 ## 2. Activity 启动流程
 
 ### 2.1 Activity 类型
 
 - App 的 Root Activity
-    
 - 普通的 Activity
-    
 
 根 Activity 的启动过程：
-
 1. Launcher 请求 ATMS 过程
-    
 2. ATMS 调用 ApplicationThread 过程
-    
 3. ActivityThread 启动 Activity 过程
-    
-
 ### 2.2 核心类与职责
 
 |类|作用|
@@ -649,30 +615,24 @@ load_565rle_image(INIT_IMAGE_FILE)
 
 调用链：
 
-text
-
+```text
 Launcher#startActivitySafely
     ===> Activity#startActivity
     -> startActivity
     ===> Instrumentation#execStartActivity
     ====> 使用 Binder IPC 调用 ActivityTaskManagerService，去启动 Activity
+```
 
 ## 4. 阶段 2：ATMS 调用 ApplicationThread 过程
 
 主要工作：
 
 1. 判断权限信息，具备权限的调用进程才可以启动 Activity。
-    
 2. `ActivityStarter` 解析 Intent 的内容，创建对应的 `ActivityRecord` 对象。
-    
 3. 根据是否需要新建 TASK，来新建或者选择对应的 `TaskRecord` 添加 Activity。
-    
 4. 处理 Task 相关状态信息，例如前台的转移。
-    
 5. 使前台 TASK 的栈顶 Activity 可见，这个过程会启动对应的 Activity，必要情况会启动对应的进程。
-    
 6. 通过 IPC 调用将启动 Activity 的事务发送到对应进程中，交由对应的 App 来处理。
-    
 
 ## 5. 阶段 3：ActivityThread 启动 Activity 过程
 

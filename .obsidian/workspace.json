@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
+                "file": "00_Inbox_收件箱/待二次整理/Retrofit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "源码-Android 核心机制与系统启动流程整理"
+              "title": "Retrofit"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.25390625,
-    "collapsed": true
+    "width": 282.25390625
   },
   "right": {
     "id": "c17ece79b12d6a60",
@@ -97,8 +96,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
-                "collapseAll": false,
+                "file": "00_Inbox_收件箱/待二次整理/Retrofit.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -159,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09_经验与复盘/04.md",
+                "file": "00_Inbox_收件箱/待二次整理/Retrofit.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -188,12 +187,12 @@
               "title": "git-history-view"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 350.5,
-    "collapsed": true
+    "width": 350.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,11 +208,11 @@
   },
   "active": "e13d54517d487462",
   "lastOpenFiles": [
+    "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
+    "00_Inbox_收件箱/待二次整理/Framwork.md",
     "01_基础与系统/01_核心原理/源码-APT注解处理原理.md",
     "01_基础与系统/01_核心原理/源码-startActivity到handleLaunchActivity完整链路.md",
-    "01_基础与系统/01_核心原理/源码-Android 核心机制与系统启动流程整理.md",
     "00_Inbox_收件箱/待二次整理/Retrofit.md",
-    "00_Inbox_收件箱/待二次整理/Framwork.md",
     "00_Inbox_收件箱/待二次整理/Flutter.md",
     "00_Inbox_收件箱/待二次整理/Fire Tv.md",
     "00_Inbox_收件箱/待分类速记/260410-问题列表.md",
