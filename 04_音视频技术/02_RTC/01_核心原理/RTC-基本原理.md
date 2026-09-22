@@ -45,4 +45,4 @@ RTCDataChannel 双向低延迟数据传输
 
 #### 硬件要求
 
-在 Manifest 中声明对**摄像头**和 OpenGL ES 2.0 的ying xing
+在 Manifest 中声明对**摄像头**和 **OpenGL ES 2.0** 的硬性要求。
