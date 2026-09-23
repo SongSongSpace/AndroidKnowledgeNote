@@ -1,4 +1,4 @@
-#网络通信
+#网络通信 #状态/未完成
 
 Open System Interconnection
 
