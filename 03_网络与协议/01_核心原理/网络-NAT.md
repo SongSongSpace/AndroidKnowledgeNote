@@ -1,3 +1,4 @@
+#状态/未完成 #网络通信 
 # 一、全称、含义
 
 Network Address Translation，网络地址转换。
