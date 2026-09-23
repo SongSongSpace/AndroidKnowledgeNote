@@ -26,3 +26,33 @@
 
 ### 典型应用
 WebRTC 视频通话、游戏联机、P2P 下载、远程桌面、Mesh VPN、IoT 直连等。
+
+### 伪代码
+
+```python
+sock = UDP socket
+sock.bind(("0.0.0.0", 0))          # 本地端口
+A_pub = stun_get_mapped(sock)       # 问 STUN 自己的公网地址
+send_to_signal(A_pub)               # 告诉信令服务器
+B_pub = recv_from_signal()          # 拿到对方公网地址
+
+for i in range(100):
+    sock.sendto(b"PING", B_pub)
+    try:
+        data, addr = sock.recvfrom(1024)
+        if data == b"PING":
+            sock.sendto(b"PONG", addr)
+        elif data == b"PONG":
+            print("打洞成功")
+            break
+    except BlockingIOError:
+        pass
+    sleep(0.02)
+```
+
+### QA
+
+1、信令服务器怎么知道要交换？
+
+本身不知道，是客户端主动注册到同一个会话/房间。关键是：**双方事先约定同一个房间号/会话 ID，或者由一方创建会话、另一方加入。**
+
