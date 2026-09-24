@@ -24,3 +24,19 @@ ping 成功并不代表 everything is ok。只能证明基础的网络连通性�
 Mike Muuss 需要一种快速有效的 **工具** 来 **排查网络故障**，以解决他们实验室的网络异常问题。
 
 名字来源于潜艇声纳——声纳发出脉冲，通过接收回声来探测水下目标。即对应 发送请求-等待应答 的工作模式。 Packet Internet Groper 因特网包探索器。
+
+#### 4、使用
+
+`ping [选项] 目标` 目标可为 IP 或域名。
+
+示例：
+- `ping 8.8.8.8`：持续 ping，Ctrl+C 停止。
+- `ping -c 4 8.8.8.8`：Linux/macOS 发 4 个包。
+- `ping -n 4 8.8.8.8`：Windows 发 4 个包。
+- `ping -t 192.168.1.1`：Windows 持续 ping。
+- `ping -i 0.5 -c 10 目标`：Linux 每 0.5 秒一次，共 10 次。
+- `ping -s 1472 -c 4 目标`：Linux 指定包大小，测 MTU。
+- `ping -W 2 -c 4 目标`：Linux 超时 2 秒。
+- `ping -6 目标`：强制 IPv6。
+
+输出看：`time` 延迟，`ttl` 粗略判断系统，末尾丢包率和平均延迟。
