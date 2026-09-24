@@ -72,3 +72,4 @@ for i in range(100):
 	另外，UDP NAT 映射有超时，通常 `30 秒 ~ 几分钟`。  
 	所以打洞成功后，还要定期发 **keepalive** 包，否则洞会关掉。
 
+3、UDP socket 建立需要什么条件？什么时候建立？什么shi s
