@@ -1,13 +1,13 @@
 #技术栈/WebRTC #RTP #网络传输
 
-## 一、是什么？
+### 一、是什么？
 
 WebRTC 是 Web Real-Time Communication，是一个支持**浏览器**、**移动应用**和**桌面应用**进行实时通信的平台，通常用于**视频通话**、**语言聊天**和**P2P文件分享**等场景。
 
 **不是**：单一协议。
 **是**：包含**媒体采集**、**编解码**、**网络传输**、**加密**等全套技术和标准的技术栈。整合在 50 多项 RFC 中。
 
-## 二、涵盖范围
+### 二、涵盖范围
 
 #### 媒体采集
 
@@ -37,12 +37,20 @@ DTLS-SRTP 默认加密所有媒体流
 
 RTCDataChannel 双向低延迟数据传输
 
-## 三、必要权限与硬件适配
+### 三、必要权限与硬件适配
 
-#### 权限
 
-必须申请**CAMERA**、**RECORD_AUDIO**、**INTERNET**、**MODIFY_AUDIO_SETTINGS** 等权限。
 
-#### 硬件要求
+### 四、基础
 
-在 Manifest 中声明对**摄像头**和 **OpenGL ES 2.0** 的硬性要求。
+1、WebRTC 核心对象模型（Android Native API）
+
+2、信令与连接建立流程
+
+3、NAT 穿透三件套（ICE / STUN / TURN）
+
+4、Android 权限与硬件适配
+
+	权限：必须申请 CAMERA、RECORD_AUDIO、INTERNET、MODIFY_AUDIO_SETTINGS 等权限。
+	硬件要求：在 Manifest 中声明对 摄像头 和 OpenGL ES 2.0 的硬性要求。
+
