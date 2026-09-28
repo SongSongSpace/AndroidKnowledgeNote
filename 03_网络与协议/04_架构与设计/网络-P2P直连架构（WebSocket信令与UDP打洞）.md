@@ -2,6 +2,9 @@
 
 ### 一、打洞 socket  和 WebSocket
 
+1、使用socket与信令服务器建连的原因
+	TCP 可靠、保序，必须确保交换NAT地址和房间信息不丢包。
+
 
 
 
