@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_音视频技术/02_RTC/05_踩坑与解决/RTC-回声消除AEC机制.md",
-                "mode": "source",
+                "file": "04_音视频技术/02_RTC/05_踩坑与解决/WebRTC 采集端“无声”导致接收端刺耳音频——踩坑沉淀.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RTC-回声消除AEC机制"
+              "title": "WebRTC 采集端“无声”导致接收端刺耳音频——踩坑沉淀"
             }
           }
         ]
@@ -210,7 +210,7 @@
   "active": "e13d54517d487462",
   "lastOpenFiles": [
     "04_音视频技术/02_RTC/01_核心原理/RTC-WebRTC 媒体采集API.md",
-    "04_音视频技术/02_RTC/05_踩坑与解决/RTC-回声消除AEC机制.md",
+    "04_音视频技术/02_RTC/05_踩坑与解决/WebRTC 采集端“无声”导致接收端刺耳音频——踩坑沉淀.md",
     "04_音视频技术/02_RTC/01_核心原理/RTC-Android Native API.md",
     "04_音视频技术/02_RTC/01_核心原理/RTC-WebRTC SDP详解.md",
     "04_音视频技术/02_RTC/01_核心原理/RTC-基本原理.md",
