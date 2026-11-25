@@ -3,8 +3,8 @@
 ## 建连与采集路径
 
 1. [[RTC-基本原理]]：先了解 RTC 组成。
-2. [[网络-NAT]] → [[网络-NAT穿透 Hole Puching 技术]] → [[架构-P2P 连接]]：理解双方为什么需要发现地址和穿透。
-3. [[网络-P2P直连架构（WebSocket信令与UDP打洞）]] → [[RTC-信令与建立连接流程]] → [[RTC-WebRTC SDP详解]]：区分信令、候选地址与媒体协商。
+2. [[概念与机制/网络/NAT|网络-NAT]] → [[概念与机制/网络/NAT穿透|网络-NAT穿透 Hole Puching 技术]] → [[概念与机制/连接/P2P连接|架构-P2P 连接]]：理解双方为什么需要发现地址和穿透。
+3. [[操作与方案/连接/WebSocket信令与UDP打洞|网络-P2P直连架构（WebSocket信令与UDP打洞）]] → [[RTC-信令与建立连接流程]] → [[RTC-WebRTC SDP详解]]：区分信令、候选地址与媒体协商。
 4. [[RTC-WebRTC 媒体采集API]]、[[RTC-Android Native API]]：进入采集对象和 Android API；抓屏另见 [[采集-Android抓屏方案技术总结]]。
 
 ## 已有故障经验
