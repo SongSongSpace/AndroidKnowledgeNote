@@ -11,10 +11,14 @@
             "id": "e13d54517d487462",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "项目与产品/厂商调研/Fire TV.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fire TV"
             }
           }
         ]
@@ -154,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_音视频技术/02_RTC/01_核心原理/RTC-Android Native API.md",
+                "file": "项目与产品/厂商调研/Fire TV.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -202,8 +206,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e13d54517d487462",
+  "active": "2a36e15900f34c94",
   "lastOpenFiles": [
+    "未命名.canvas",
     "资源与待办/旧MOC待学主题.md",
     "资源与待办/待写主题/CPU架构.md",
     "资源与待办/手写数字识别资源.md",
@@ -239,7 +244,6 @@
     "操作与方案/工具/fetch_rate_with_bitable.py",
     "操作与方案/Android/Android数据库版本迁移.md",
     "操作与方案/Android/Android循环与内存.md",
-    "操作与方案/Android/ADB调试命令.md",
     "Untitled.canvas"
   ]
 }
