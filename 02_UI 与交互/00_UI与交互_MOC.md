@@ -3,7 +3,7 @@
 > 聚焦 Android UI 控件使用、交互体验优化与动效实践。
 
 ## 01_控件实践
-- [[UI-AndroidSearchView使用与实践]] : SearchView 控件集成与搜索逻辑实践
+- [[项目与产品/开源项目/AndroidSearchView官方示例|UI-AndroidSearchView使用与实践]] : SearchView 控件集成与搜索逻辑实践
 
 ## 02_交互与动效
 - [[UI-弹窗延迟实例化躲避动效]] : Dialog 生命周期与动画掉帧问题的规避方案

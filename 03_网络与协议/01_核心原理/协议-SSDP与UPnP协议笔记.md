@@ -100,6 +100,6 @@ lock.release();  // 释放
 ```
 
 ### 🔑 关联笔记
-[[Lighthouse - 状态驱动的网络设备搜索](../../06_工程与运维/02_测试与质量/质量-Lighthouse性能审计.md)]
+[[Lighthouse - 状态驱动的网络设备搜索](../../%E9%A1%B9%E7%9B%AE%E4%B8%8E%E4%BA%A7%E5%93%81/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/Lighthouse%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BE%E5%A4%87%E6%90%9C%E7%B4%A2%E5%BA%93.md)]
 
-[[AndroidSearchView - 官方搜索示例](../../02_UI%20与交互/02_代码片段与实践/UI-AndroidSearchView使用与实践.md)]
+[[AndroidSearchView - 官方搜索示例](../../%E9%A1%B9%E7%9B%AE%E4%B8%8E%E4%BA%A7%E5%93%81/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/AndroidSearchView%E5%AE%98%E6%96%B9%E7%A4%BA%E4%BE%8B.md)]
